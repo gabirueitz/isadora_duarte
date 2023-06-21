@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="./src/css/style.css">
     <link rel="stylesheet" href="./src/css/animations.css">
 
-
     <link rel="apple-touch-icon" sizes="180x180" href="./src/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./src/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./src/images/favicon-16x16.png">
@@ -24,15 +23,15 @@
         <picture><img src="./src/images/logo_clara.png" alt="logomarca" class="logo"></picture>
         <nav>
             <ul class="navLinks" id="navLinks">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#diferenciais">Diferenciais</a></li>
-                <li><a href="#atuacao">Áreas de Atuação</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li><a href="#home" onclick="desativaMenu()">Home</a></li>
+                <li><a href="#atuacao" onclick="desativaMenu()">Áreas de Atuação</a></li>
+                <li><a href="#diferenciais" onclick="desativaMenu()">Diferenciais</a></li>
+                <li><a href="#contato" onclick="desativaMenu()">Contato</a></li>
             </ul>
         </nav>
     </header>
     <aside>
-        <a href=""><span class="textoAtend">Atendimento rápido e personalizado aqui!</span>
+        <a href="" target="_blank"><span class="textoAtend">Atendimento rápido e personalizado aqui!</span>
             <img src="./src/images/icons8-whatsapp.gif" alt="Whatsapp icon"></a>
     </aside>
     <section id="home">
@@ -51,18 +50,6 @@
         </div>
     </section>
 
-    <section id="diferenciais">
-        <div class="content reveal">
-            <h2>Diferenciais</h2>
-            <ul>
-                <li>Inteligência</li>
-                <li>Beleza</li>
-                <li>Elegância</li>
-                <li>Vontade de dar na cara</li>
-            </ul>
-        </div>
-    </section>
-
     <section id="atuacao">
         <div class="content reveal">
             <h2>Áreas de Atuação</h2>
@@ -75,6 +62,18 @@
                 <li>Previdência privada</li>
                 <li>Benefício assistencial</li>
                 <li>Salário-maternidade</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="diferenciais">
+        <div class="content reveal">
+            <h2>Diferenciais</h2>
+            <ul>
+                <li>Inteligência</li>
+                <li>Beleza</li>
+                <li>Elegância</li>
+                <li>Vontade de dar na cara</li>
             </ul>
         </div>
     </section>
