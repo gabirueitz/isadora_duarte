@@ -2,17 +2,32 @@
 @import url('https://fonts.cdnfonts.com/css/clarissa-2');
 
 
+@font-face {
+    font-family: 'Minion Pro Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Minion Pro Regular'), url('../fonts/MinionPro-Regular.woff') format('woff');
+}
+
 
 @font-face {
-    font-family: "Minion Variable Concept";
-    src: url('../fonts/Minion_Variable_Concept.otf') format('opentype');
-    font-weight: normal;
+    font-family: 'Minion Pro Italic';
     font-style: normal;
+    font-weight: normal;
+    src: local('Minion Pro Italic'), url('../fonts/MinionPro-It.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Minion Pro Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Minion Pro Medium'), url('../fonts/MinionPro-Medium.woff') format('woff');
 }
 
 :root {
     --font-title: 'Clarissa', cursive;
-    --font-text: "Minion Variable Concept", serif;
+    --font-text: "Minion Pro Regular", serif;
     --color1: #232323;
     --color2: #e8e8e8;
     --color3: #4c515b;
@@ -46,6 +61,18 @@ header {
     z-index: 1000;
 }
 
+.burguerIcon,
+.burguerIcon:visited {
+    display: none;
+    text-decoration: none;
+    color: var(--color2);
+}
+
+#icon {
+    color: var(--color2);
+    width: 35px;
+}
+
 .logo {
     max-height: 40px;
 }
@@ -62,7 +89,7 @@ header {
     color: var(--color2);
     font-weight: 600;
     text-decoration: none;
-    padding: 16px 10px;
+    padding: 20px 10px;
 }
 
 .navLinks a:hover {
@@ -172,9 +199,13 @@ section h2 {
 
 form {
     max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .formContacts {
+    width: 100%;
     display: flex;
     gap: 5%;
 }
@@ -194,7 +225,7 @@ textarea {
 }
 
 input[type=submit] {
-    margin: 0 auto;
+    margin: 20px;
     width: 30%;
     height: 45px;
     font-size: 18px;
@@ -214,4 +245,77 @@ input:hover,
 textarea:hover {
     border-bottom: 2px solid var(--color3);
     border-right: 2px solid var(--color3);
+}
+
+input[type=submit]:hover {
+    background-color: var(--color1);
+}
+
+@media (max-width: 850px) {
+    .burguerIcon {
+        display: block;
+    }
+
+    .navLinks {
+        display: none;
+        flex-direction: column;
+        background-color: var(--color3);
+        border-radius: 0 0 100% 0;
+        width: 220px;
+        height: 210px;
+    }
+
+    .navLinks a,
+    .navLinks a:visited {
+        padding: 5px 10px;
+        line-height: 2em;
+        border-radius: 50px;
+    }
+
+    .active {
+        display: block;
+    }
+
+    .textoAtend {
+        display: none;
+    }
+
+    aside {
+        padding-left: 8px;
+    }
+
+    aside a,
+    aside a:visited {
+        width: 40px;
+    }
+
+    .content {
+        width: 85%;
+    }
+
+    .imgTitle {
+        width: 75%;
+        margin-right: 0px;
+        margin: 0 auto;
+    }
+
+    .title {
+        max-width: 100%;
+    }
+
+    .card {
+        width: 80%;
+        margin-right: 0px;
+        margin: 0 auto;
+        padding: 40px 15px;
+    }
+
+    .responsive {
+        display: block;
+        position: absolute;
+        padding: 10px;
+        margin: 0;
+        left: 0;
+        top: var(--headerHeight);
+    }
 }

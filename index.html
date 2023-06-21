@@ -19,9 +19,11 @@
 
 <body>
     <header>
+        <a href="javascript:void(0);" class="burguerIcon" onclick="ativaMenu()"> <img src="./src/images/burguer.svg"
+                alt="icon" id="icon"></a>
         <picture><img src="./src/images/logo_clara.png" alt="logomarca" class="logo"></picture>
         <nav>
-            <ul class="navLinks">
+            <ul class="navLinks" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#diferenciais">Diferenciais</a></li>
                 <li><a href="#atuacao">Áreas de Atuação</a></li>
@@ -30,8 +32,8 @@
         </nav>
     </header>
     <aside>
-        <a href=""><span>Atendimento rápido e personalizado aqui!</span>
-            <img src="./src/images/icons8-whatsapp.gif" alt=" "></a>
+        <a href=""><span class="textoAtend">Atendimento rápido e personalizado aqui!</span>
+            <img src="./src/images/icons8-whatsapp.gif" alt="Whatsapp icon"></a>
     </aside>
     <section id="home">
         <picture class="imgTitle"><img src="./src/images/logo_escrita.png" alt="logomarca" class="title"></picture>
@@ -80,23 +82,23 @@
     <section id="contato">
         <div class="content reveal">
             <h2>Contato</h2>
-            <p> Por favor, preencha abaixo um breve relato do seu caso e suas principais dúvidas. <br> Retornarei o mais
-                breve o possível.</p>
+            <p> Por favor, preencha abaixo um breve relato do seu caso e suas dúvidas.
+                <br> Retornarei o mais breve possível.
+            </p>
             <form method=”POST” enctype=”text/plain” name=”EmailForm” required>
                 <input type="text" name="name" id="name" placeholder="Nome Completo" required>
-                <br>
                 <div class="formContacts">
                     <input type="tel" name="phone" id="phone" placeholder="Celular ou Telefone" required>
                     <input type="email" name="email" id="email" placeholder="e-mail" required>
                 </div>
                 <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Comentário" required></textarea>
-                <br>
                 <input type="submit" value="Enviar">
         </div>
         </form>
     </section>
 
     <script src="./src/js/animations.js"></script>
+    <script src="./src/js/menu.js"></script>
 </body>
 
 </html>
