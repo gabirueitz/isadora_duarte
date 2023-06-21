@@ -130,7 +130,7 @@ section {
     scroll-snap-align: start;
     scroll-snap-stop: always;
     border-bottom: 2px solid white;
-    height: 100vh;
+    min-height: 100vh;
     padding-top: var(--headerHeight);
     font-family: var(--font-text);
     color: var(--color1);
@@ -198,6 +198,30 @@ section h2 {
     background-color: var(--color1)
 }
 
+#diferenciais p,
+#atuacao p {
+    text-indent: 2em;
+    text-align: justify;
+}
+
+.box {
+    display: flex;
+    gap: 5%;
+}
+
+#atuacao ul {
+    width: 30%;
+}
+
+.text {
+    width: 65%;
+}
+
+.citacao {
+    font-size: 0.8em;
+    padding-left: 20%;
+}
+
 form {
     max-width: 600px;
     display: flex;
@@ -257,6 +281,11 @@ input[type=submit]:hover {
         padding: 10px;
     }
 
+    section {
+        scroll-snap-align: start;
+        scroll-snap-stop: normal;
+    }
+
     .burguerIcon {
         display: block;
     }
@@ -313,6 +342,15 @@ input[type=submit]:hover {
         margin-right: 0px;
         margin: 0 auto;
         padding: 40px 15px;
+    }
+
+    .box {
+        flex-direction: column;
+    }
+
+    #atuacao ul,
+    .text {
+        width: 100%;
     }
 
     .responsive {
