@@ -1,364 +1,426 @@
-@import url('https://fonts.googleapis.com/css2?family=Birthstone+Bounce:wght@400;500&display=swap');
-@import url('https://fonts.cdnfonts.com/css/clarissa-2');
-
+@import url("https://fonts.googleapis.com/css2?family=Birthstone+Bounce:wght@400;500&display=swap");
+@import url("https://fonts.cdnfonts.com/css/clarissa-2");
 
 @font-face {
-    font-family: 'Minion Pro Regular';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Minion Pro Regular'), url('../fonts/MinionPro-Regular.woff') format('woff');
+	font-family: "Minion Pro Regular";
+	font-style: normal;
+	font-weight: normal;
+	src: local("Minion Pro Regular"),
+		url("../fonts/MinionPro-Regular.woff") format("woff");
 }
 
-
 @font-face {
-    font-family: 'Minion Pro Italic';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Minion Pro Italic'), url('../fonts/MinionPro-It.woff') format('woff');
+	font-family: "Minion Pro Italic";
+	font-style: normal;
+	font-weight: normal;
+	src: local("Minion Pro Italic"),
+		url("../fonts/MinionPro-It.woff") format("woff");
 }
 
-
 @font-face {
-    font-family: 'Minion Pro Medium';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Minion Pro Medium'), url('../fonts/MinionPro-Medium.woff') format('woff');
+	font-family: "Minion Pro Medium";
+	font-style: normal;
+	font-weight: normal;
+	src: local("Minion Pro Medium"),
+		url("../fonts/MinionPro-Medium.woff") format("woff");
 }
 
 :root {
-    --font-title: 'Clarissa', cursive;
-    --font-text: "Minion Pro Regular", serif;
-    --color1: #232323;
-    --color2: #e8e8e8;
-    --color3: #4c515b;
-    --headerHeight: 60px;
+	--font-title: "Clarissa", cursive;
+	--font-text: "Minion Pro Regular", serif;
+	--color1: #232323;
+	--color2: #e8e8e8;
+	--color3: #4c515b;
+	--headerHeight: 60px;
 }
 
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 html {
-    scroll-snap-type: y mandatory;
+	scroll-snap-type: y mandatory;
 }
 
 body {
-    font-size: 10px;
-    background-color: var(--color2);
+	font-size: 10px;
+	background-color: var(--color2);
 }
 
 header {
-    background-color: var(--color3);
-    font-family: var(--font-text);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 30px;
-    height: 60px;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 1000;
+	background-color: var(--color3);
+	font-family: var(--font-text);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 30px;
+	height: 60px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 1000;
 }
 
 .burguerIcon,
 .burguerIcon:visited {
-    display: none;
-    text-decoration: none;
-    color: var(--color2);
+	display: none;
+	text-decoration: none;
+	color: var(--color2);
 }
 
 #icon {
-    color: var(--color2);
-    width: 35px;
+	color: var(--color2);
+	width: 35px;
 }
 
 .logo {
-    max-height: 40px;
+	max-height: 40px;
 }
 
 .navLinks {
-    list-style-type: none;
-    display: flex;
-    gap: 20px;
+	list-style-type: none;
+	display: flex;
+	gap: 20px;
 }
 
 .navLinks a,
 .navLinks a:visited {
-    font-size: 2em;
-    color: var(--color2);
-    font-weight: 600;
-    text-decoration: none;
-    padding: 20px 10px;
+	font-size: 2em;
+	color: var(--color2);
+	font-weight: 600;
+	text-decoration: none;
+	padding: 20px 10px;
 }
 
 .navLinks a:hover {
-    background-color: var(--color2);
-    color: var(--color3);
+	background-color: var(--color2);
+	color: var(--color3);
 }
 
 .navLinks a:active {
-    text-decoration: underline;
+	text-decoration: underline;
 }
 
 aside {
-    top: 90%;
-    position: fixed;
-    background-color: white;
-    border-radius: 0 100px 100px 0;
-    padding-left: 15px;
-    z-index: 900;
+	top: 90%;
+	position: fixed;
+	background-color: white;
+	border-radius: 0 100px 100px 0;
+	padding-left: 15px;
+	z-index: 900;
 }
 
 aside img {
-    border-radius: 50%;
+	border-radius: 50%;
 }
 
 aside a,
 aside a:visited {
-    width: 180px;
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    text-decoration: none;
-    font-family: var(--font-text);
-    color: var(--color1);
-    font-size: 1.4em;
+	width: 180px;
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	text-decoration: none;
+	font-family: var(--font-text);
+	color: var(--color1);
+	font-size: 1.4em;
 }
 
 section {
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-    border-bottom: 2px solid white;
-    min-height: 100vh;
-    padding-top: var(--headerHeight);
-    font-family: var(--font-text);
-    color: var(--color1);
-    font-size: 2em;
-    display: flex;
-    justify-content: center;
+	scroll-snap-align: start;
+	scroll-snap-stop: always;
+	border-bottom: 2px solid white;
+	min-height: 100vh;
+	padding-top: var(--headerHeight);
+	font-family: var(--font-text);
+	color: var(--color1);
+	font-size: 2em;
+	display: flex;
+	justify-content: center;
 }
 
 .content {
-    width: 70%;
+	width: 70%;
 }
 
 section h2 {
-    margin: 30px 0 0 0;
-    font-family: var(--font-title);
-    font-size: 3em;
+	margin: 30px 0 0 0;
+	font-family: var(--font-title);
+	font-size: 3em;
 }
 
 #home {
-    background-image: url(../images/banner.jpg);
-    display: flex;
-    flex-direction: column;
-    align-items: end;
+	background-image: url(../images/banner.jpg);
+	display: flex;
+	flex-direction: column;
+	align-items: end;
 }
 
 .imgTitle {
-    width: 500px;
-    margin-right: 50px;
-    text-align: center;
+	width: 500px;
+	margin-right: 50px;
+	text-align: center;
 }
 
 .title {
-    max-width: 450px;
-    transform: translateY(50%);
+	max-width: 450px;
+	transform: translateY(50%);
 }
 
-.card {
-    width: 500px;
-    margin-right: 50px;
-    background-color: rgba(255, 255, 255, 0.6);
-    padding: 40px 30px;
-    border-radius: 15px;
-    text-align: justify;
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+.home-box {
+	width: 500px;
+	margin-right: 50px;
+	background-color: rgba(255, 255, 255, 0.6);
+	padding: 40px 30px;
+	border-radius: 15px;
+	text-align: justify;
+	box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
 }
 
-.card p {
-    text-indent: 2em;
+.home-box p {
+	text-indent: 2em;
 }
 
-.card div {
-    text-align: center;
+.home-box div {
+	text-align: center;
 }
 
-.card a,
-.card a:visited {
-    text-decoration: none;
-    margin-top: 30px;
-    padding: 10px 25px;
-    background-color: var(--color3);
-    color: var(--color2);
+.home-box a,
+.home-box a:visited {
+	text-decoration: none;
+	margin-top: 30px;
+	padding: 10px 25px;
+	background-color: var(--color3);
+	color: var(--color2);
 }
 
-.card a:hover {
-    background-color: var(--color1)
+.home-box a:hover {
+	background-color: var(--color1);
 }
 
 #diferenciais p,
 #atuacao p {
-    text-indent: 2em;
-    text-align: justify;
+	text-indent: 2em;
+	text-align: justify;
 }
 
 .box {
-    display: flex;
-    gap: 5%;
+	width: 100%;
+	display: flex;
+	gap: 5%;
+	align-items: center;
+	justify-content: center;
 }
 
 #atuacao ul {
-    width: 30%;
+	width: 50%;
 }
 
 .text {
-    width: 65%;
+	font-size: 115%;
+	width: 40%;
+	line-height: 175%;
+	text-align: center;
 }
 
-.citacao {
-    font-size: 0.8em;
-    padding-left: 20%;
+.text span {
+	font-family: "Minion Pro Italic";
+}
+
+.divider {
+	margin-top: 5px;
+	width: 80%;
+}
+
+.rotated {
+	transform: rotate(180deg);
+}
+
+#diferenciais {
+	position: relative;
+    padding-bottom: clamp(250px, 900px - 40vw, 800px);
+}
+
+#diferenciais .text {
+	width: 65%;
+}
+
+#diferenciais img {
+	max-width: 300px;
+	border-radius: 50% 50% 50% 50%;
+	border: 1px solid --color1;
+}
+
+.cards {
+	width: 70%;
+	display: flex;
+	justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 25px;
+	position: absolute;
+	bottom: 25px;
+}
+
+.card {
+	width: 260px;
+    max-height: 220px;
+	background-color: rgba(255, 255, 255, 0.6);
+	padding: 15px;
+	border-radius: 15px;
+	text-align: center;
+	box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+}
+
+#diferenciais .card p {
+	text-indent: 0em;
+	text-align: center;
 }
 
 form {
-    max-width: 600px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+	max-width: 600px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .formContacts {
-    width: 100%;
-    display: flex;
-    gap: 5%;
+	width: 100%;
+	display: flex;
+	gap: 5%;
 }
 
 input,
 textarea {
-    width: 100%;
-    height: 40px;
-    padding: 5px 15px;
-    margin: 10px 0;
-    border-style: none;
+	width: 100%;
+	height: 40px;
+	padding: 5px 15px;
+	margin: 10px 0;
+	border-style: none;
 }
 
 textarea {
-    resize: none;
-    height: 180px;
+	resize: none;
+	height: 180px;
 }
 
-input[type=submit] {
-    margin: 20px;
-    width: 30%;
-    height: 45px;
-    font-size: 18px;
-    font-family: var(--font-text);
-    color: var(--color2);
-    background-color: var(--color3);
+input[type="submit"] {
+	margin: 20px;
+	width: 30%;
+	height: 45px;
+	font-size: 18px;
+	font-family: var(--font-text);
+	color: var(--color2);
+	background-color: var(--color3);
 }
 
 input::placeholder,
 textarea::placeholder {
-    font-family: var(--font-text);
-    font: 20px;
-    color: var(--color1);
+	font-family: var(--font-text);
+	font: 20px;
+	color: var(--color1);
 }
 
 input:hover,
 textarea:hover {
-    border-bottom: 2px solid var(--color3);
-    border-right: 2px solid var(--color3);
+	border-bottom: 2px solid var(--color3);
+	border-right: 2px solid var(--color3);
 }
 
-input[type=submit]:hover {
-    background-color: var(--color1);
+input[type="submit"]:hover {
+	background-color: var(--color1);
 }
 
 @media (max-width: 850px) {
-    header {
-        padding: 10px;
-    }
+	header {
+		padding: 10px;
+	}
 
-    section {
-        scroll-snap-align: start;
-        scroll-snap-stop: normal;
-    }
+	section {
+		scroll-snap-align: start;
+		scroll-snap-stop: normal;
+	}
 
-    .burguerIcon {
-        display: block;
-    }
+	.burguerIcon {
+		display: block;
+	}
 
-    .navLinks {
-        display: none;
-        flex-direction: column;
-        background-color: var(--color3);
-        border-radius: 0 0 100% 0;
-        width: 220px;
-        height: 210px;
-    }
+	.navLinks {
+		display: none;
+		flex-direction: column;
+		background-color: var(--color3);
+		border-radius: 0 0 100% 0;
+		width: 220px;
+		height: 210px;
+	}
 
-    .navLinks a,
-    .navLinks a:visited {
-        padding: 5px 10px;
-        line-height: 2em;
-        border-radius: 50px;
-    }
+	.navLinks a,
+	.navLinks a:visited {
+		padding: 5px 10px;
+		line-height: 2em;
+		border-radius: 50px;
+	}
 
-    .active {
-        display: block;
-    }
+	.active {
+		display: block;
+	}
 
-    .textoAtend {
-        display: none;
-    }
+	.textoAtend {
+		display: none;
+	}
 
-    aside {
-        padding-left: 8px;
-    }
+	aside {
+		padding-left: 8px;
+	}
 
-    aside a,
-    aside a:visited {
-        width: 40px;
-    }
+	aside a,
+	aside a:visited {
+		width: 40px;
+	}
 
-    .content {
-        width: 85%;
-    }
+	.content {
+		width: 85%;
+	}
 
-    .imgTitle {
-        width: 75%;
-        margin-right: 0px;
-        margin: 0 auto;
-    }
+	.imgTitle {
+		width: 75%;
+		margin-right: 0px;
+		margin: 0 auto;
+	}
 
-    .title {
-        max-width: 100%;
-    }
+	.title {
+		max-width: 100%;
+	}
 
-    .card {
-        width: 80%;
-        margin-right: 0px;
-        margin: 0 auto;
-        padding: 40px 15px;
-    }
+	.home-box {
+		width: 80%;
+		margin-right: 0px;
+		margin: 0 auto;
+		padding: 40px 15px;
+	}
 
-    .box {
-        flex-direction: column;
-    }
+	.box {
+		flex-direction: column;
+	}
 
-    #atuacao ul,
-    .text {
+	#atuacao ul,
+	.text {
+		width: 100%;
+	}
+
+    #diferenciais .text {
         width: 100%;
     }
 
-    .responsive {
-        display: block;
-        position: absolute;
-        padding: 10px;
-        margin: 0;
-        left: 0;
-        top: var(--headerHeight);
+    .card {
+        width: 100%;
     }
+
+	.responsive {
+		display: block;
+		position: absolute;
+		padding: 10px;
+		margin: 0;
+		left: 0;
+		top: var(--headerHeight);
+	}
 }
