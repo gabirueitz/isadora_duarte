@@ -192,7 +192,7 @@ section h2 {
 	padding: 10px 25px;
 	background-color: var(--color3);
 	color: var(--color2);
-	border-radius: 5px;
+	border-radius: 8px;
 }
 
 .home-box a:hover {
